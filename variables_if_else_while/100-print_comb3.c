@@ -15,20 +15,16 @@ int main(void)
 	{
 		for (numberRight = leftLimit++; numberRight <= 57; numberRight++)
 		{
-		
 			if (numberRight != numberLeft)
 			{
-			
 				putchar(numberLeft);
 				putchar(numberRight);
 				if (!(numberRight ==  57 && numberLeft == 56))
 				{
-				
 					putchar(',');
 					putchar(' ');
-																			}
-																		}
-		
+				}
+			}
 		}
 	}
 	putchar('\n');
