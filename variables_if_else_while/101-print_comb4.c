@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 /**
  * main - Entry point
  *
@@ -16,32 +15,26 @@ int main(void)
 		{
 			for (numberMiddle = numberLeft + 1; numberMiddle <= 57; numberMiddle++)
 			{
-
 				for (numberRight = numberMiddle + 1; numberRight <= 57; numberRight++)
-																			{
-																				if (numberMiddle != numberRight)
-																				{
-	
-						putchar(numberLeft);
-						putchar(numberMiddle);
-						purchar(numberRight);													if (!(
-							
-							numberRight ==  57
-							&& numberMiddle == 56
-							&& numberLeft == 55
-						
-						))
-						
-						{
-						
-							putchar(',');
-							putchar(' ');
-						
-						}
+			{
+				if (numberMiddle != numberRight)
+				{
+					putchar(numberLeft);
+					putchar(numberMiddle);
+					purchar(numberRight);
+					if (!(
+						numberRight ==  57
+						&& numberMiddle == 56
+						&& numberLeft == 55
+					))
+					{
+						putchar(',');
+						putchar(' ');
 					}
 				}
 			}
 		}
-		putchar('\n');
-		return (0);
+	}
+	putchar('\n');
+	return (0);
 }
