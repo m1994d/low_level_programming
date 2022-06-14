@@ -22,21 +22,26 @@ int main(void)
 																				if (numberMiddle != numberRight)
 																				{
 	
-																					putchar(numberLeft);
+						putchar(numberLeft);
 						putchar(numberMiddle);
 						purchar(numberRight);													if (!(
+							
 							numberRight ==  57
 							&& numberMiddle == 56
 							&& numberLeft == 55
+						
 						))
+						
 						{
+						
 							putchar(',');
 							putchar(' ');
+						
 						}
 					}
 				}
 			}
 		}
 		putchar('\n');
-		eturn (0);
+		return (0);
 }
