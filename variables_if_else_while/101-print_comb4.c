@@ -21,7 +21,7 @@ int main(void)
 				{
 					putchar(numberLeft);
 					putchar(numberMiddle);
-					purchar(numberRight);
+					putchar(numberRight);
 					if (!(
 						numberRight ==  57
 						&& numberMiddle == 56
