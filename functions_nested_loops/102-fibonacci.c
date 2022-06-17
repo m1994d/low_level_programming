@@ -21,7 +21,7 @@ int main(void)
 		num2 = fib;
 		if (pos != 48)
 			printf("%ld, ", fib);
-																	else
+		else
 			printf("%ld\n", fib);
 	}
 	return (0);
