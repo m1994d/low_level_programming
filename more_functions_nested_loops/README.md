@@ -1,6 +1,6 @@
 <h1> C - More functions, more nested loops </h1>
 
-## General
+# General
 
 > Allowed editors: vi, vim, emacs
 >
@@ -17,8 +17,4 @@ In the following examples, the main.c files are shown as examples. You can use t
 The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called main.h
 Don’t forget to push your header file
 
-  ``var name = 'Escuela de Javascript' -->
-
-  " console.log(name)
-
-# Made by Marlon Andres Diaz for Holberton School Col.
+## Made by Marlon Andres Diaz for Holberton School Col.
