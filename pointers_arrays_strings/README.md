@@ -1,8 +1,8 @@
-##pointers_arrays_strings
+<h1> pointers_arrays_strings </h1>
 
-** Requirements
+Requirements
 
-*General
+General
 
 Allowed editors: vi, vim, emacs
 All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
@@ -18,4 +18,4 @@ In the following examples, the main.c files are shown as examples. You can use t
 The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called main.h
 Don’t forget to push your header file
 
-Made by Marlon Andres Diaz for Holberton School Col.
+ ## Made by Marlon Andres Diaz for Holberton School Col.
