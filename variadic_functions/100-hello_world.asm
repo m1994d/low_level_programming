@@ -1,16 +1,18 @@
 section .data
-    msg db "Hello world!",10
+msg: DB 'Hello, World', 10
+msgSize EQU $ - msg
+
+global main
 
 section .text
-	global main
 
-main:
-    mov rax, 1
-    mov rdi, 1
-    mov rsi, msg
-    mov rdx, 13
-    syscall
-    
-    mov rax, 60
-    mov rdi, 0
-    syscall
+	main:
+	mov rax, 4		; function 4
+	mov rbx, 1		; stdout
+	mov rcx, msg		; msg
+	mov rdx, msgSize	; size
+	int 0x80
+	mov rax, 1		; function 1
+	mov rbx, 0		; code
+	int 0x80
+	ret
