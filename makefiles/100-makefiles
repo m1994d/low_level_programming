@@ -1,0 +1,27 @@
+# https://www.gnu.org/software/make/manual/html_node/Implicit-Variables.html
+# RM default value is rm -f
+# .PHONY run the rule yes or yes
+# The order of requeriments is important
+# The implicit rule of objects runs with the CFLAGS
+
+CC=gcc
+SRC=main.c school.c
+OBJ=$(SRC:.c=.o)
+NAME=school
+CFLAGS=-Wall -Werror -Wextra -pedantic
+HEAD=m.h
+
+all: $(HEAD) $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+clean:
+	$(RM) *~ $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+
+re: oclean all
+
+.PHONY: all clean oclean fclean re
