@@ -12,5 +12,5 @@ void free_list(list_t *head)
 	if (head && head->str)
 		free(head->str);
 	if (head)
-	free(head);
+		free(head);
 }
