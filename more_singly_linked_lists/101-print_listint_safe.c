@@ -1,63 +1,58 @@
 #include "lists.h"
 
 /**
- * get_index_repeat - at prints a listint_t linked list
- * @tortoise: main
- * @hare: main
- * Return: the number of nodes in the list
+ * distance_nodes - Calcs the distance between two nodes
+ * @n1: Pointer to node 1
+ * @n2: Pointer to node 2
+ * Return: Distance from node 1 to node 2
  */
-listint_t *get_index_repeat(listint_t *tortoise, listint_t *hare)
+
+unsigned int distance_nodes(const listint_t *n1, const listint_t *n2)
 {
-	if (hare == NULL || tortoise == NULL)
-		return (NULL);
+	unsigned int distance;
+	const listint_t *aux;
 
-	if (tortoise == hare)
-		return (hare);
-
-	return (get_index_repeat(tortoise->next, hare->next->next));
-}
-
-/**
- * print_nodes - at prints a listint_t linked list
- * @node: main
- * @node_repeat: main
- * @repeat: main
- * Return: the number of nodes in the list
- */
-size_t print_nodes(listint_t *node, listint_t *node_repeat, int repeat)
-{
-
-	if (node == NULL)
-		return (0);
-	if (node_repeat == node)
-		repeat -= 1;
-	if (repeat)
-		printf("[%p]  %d", (void *)node, node->n);
-	else
+	distance = 0;
+	aux = n1;
+	while (aux && aux != n2)
 	{
-		printf("-> [%p]  %d", (void *)node, node->n);
-		return (0);
+		distance += 1;
+		aux = aux->next;
 	}
-	return (1 + print_nodes(node->next, node_repeat, repeat));
+	return (distance);
 }
 
 /**
- * print_listint_safe - at prints a listint_t linked list
- * @head: main
- * Return: the number of nodes in the list
+ * print_listint_safe - that prints a listint_t linked list.
+ * Can print lists with a loop.
+ * @head: List's head pointer
+ * Return: Number of nodes
  */
+
 size_t print_listint_safe(const listint_t *head)
 {
-	listint_t *node_repeat;
+	unsigned int position, distance;
+	const listint_t *aux;
 
-	if (head == NULL)
-		return (0);
-
-	node_repeat = get_index_repeat(((listint_t *)head)->next, ((listint_t *)head)->next->next);
-
-	return (print_nodes(
-		(listint_t *)head,
-		node_repeat,
-		2
-	));
+	aux = head;
+	position = 0;
+	while (aux && aux->next)
+	{
+		distance = distance_nodes(head, aux);
+		if (position > distance)
+		{
+			printf("-> [%p] %d\n", (void *)aux, aux->n);
+			return (position);
+		}
+		printf("[%p] %d\n", (void *)aux, aux->n);
+		position += 1;
+		aux = aux->next;
+	}
+	if (aux)
+	{
+		printf("[%p] %d\n", (void *)aux, aux->n);
+		position += 1;
+		return (position);
+	}
+	return (position);
 }
