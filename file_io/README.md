@@ -38,6 +38,6 @@ General
 
 -What is the difference between a function and a system call
 
-### Made by Marlon Diaz for Holberton School Col.
+### Made by Marlon Diaz.
 
 ![Esta es una imagen](https://myoctocat.com/assets/images/base-octocat.svg)
