@@ -7,4 +7,4 @@ Your code should use the Betty style. It will be checked using betty-style.pl an
 A README.md file at the root of the repo, containing a description of the repository
 A README.md file, at the root of the folder of this project (i.e. debugging), describing what this project is about
 
-Made by Marlon Andres Diaz for Holberton School Col.
+Made by Marlon Andres Diaz.
