@@ -22,6 +22,6 @@
 
 8-delete_dnodeint.c - deletes the node at index of a dlistint_t linked list.
 
-### Made by Marlon Diaz for Holberton School Col.
+### Made by Marlon Diaz.
 
 ![Esta es una imagen](https://myoctocat.com/assets/images/base-octocat.svg)
