@@ -9,6 +9,6 @@ Read or watch:
 How to use linked lists
 Start to look for the right source of information without too much help
 
-	__Made by Marlon Diaz for Holberton School Col.__
+	__Made by Marlon Diaz.__
 
 ![Esta es una imagen](https://myoctocat.com/assets/images/base-octocat.svg)
